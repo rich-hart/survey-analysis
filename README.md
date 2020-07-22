@@ -1,5 +1,7 @@
 # Survey Analysis
 
+Obtain a new jwt token at `api/token`.
+
 ```
 cp example.env .env #place private keys in .env file
 docker-compose up -d
