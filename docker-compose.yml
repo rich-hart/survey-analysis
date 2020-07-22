@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  jupyter:
+    image: jupyter/minimal-notebook
+    container_name: survey-analysis
+    user: root
+    ports:
+      - 8888:8888
+    volumes:
+      - ./work:/home/jovyan/work
+    environment:
+      - SURVEY_JTW_USER_TOKEN=$SURVEY_JTW_USER_TOKEN
+      - JUPYTER_TOKEN=$JUPYTER_TOKEN
+      - GRANT_SUDO=yes
